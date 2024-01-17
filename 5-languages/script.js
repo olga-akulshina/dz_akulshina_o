@@ -1,5 +1,11 @@
 'use strict'
 
+const  lang = 'fr';
+// const  lang = 'en';
+// const  lang = 'es';
+// const  lang = 'de';
+// const  lang = 'ghrhr';
+
 switch (lang){
     case 'en':
         console.log('Hello!');
