@@ -6,7 +6,6 @@ const testString2 = 'itIs2-test';
 function crypto(password){
    const arr = password.split('');
    
-
    if(arr.length % 2 == 0) {
         const arrSize = 2;
         const slicedArr = [];
@@ -32,7 +31,9 @@ function crypto(password){
 const testCipher1 = crypto(testString1);
 const testCipher2 = crypto(testString2);
 
+
 console.log(`Шифр первый: ${testCipher1}\nШифр второй: ${testCipher2}` );
+
 
 
 
