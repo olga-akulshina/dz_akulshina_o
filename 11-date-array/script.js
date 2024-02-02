@@ -19,7 +19,6 @@ function selectDates(array){
     })
 }
 
-
 console.log(selectDates(arr));
 
 
