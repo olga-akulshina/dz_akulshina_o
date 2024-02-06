@@ -12,7 +12,7 @@ function arraySelection(array, actionOnElement){
     return newArray;
 }
 
-let removeElement = num => !(num >= 10);
+let removeElement = num => (num <= 10);
 
 const result = arraySelection(arrayAges, removeElement);
 console.log(result);

@@ -7,8 +7,8 @@ function selectDates(array){
         .filter(el => { return Date.parse(el)})
         .map(el => {
             if(el.includes('/')){
-                let splitted = el.split('/');
-                let tmp = [];
+                const splitted = el.split('/');
+                const tmp = [];
                 tmp.push(splitted[1]);
                 tmp.push(splitted[0]);
                 tmp.push(splitted[2]);
@@ -20,7 +20,3 @@ function selectDates(array){
 }
 
 console.log(selectDates(arr));
-
-
-
-
