@@ -22,10 +22,10 @@ const toDoList = {
     },
     updateData: function (id, newInfo) {
         const index = this.tasks.findIndex(el => el.id == id);
-        if (newInfo != null && newInfo != '' && typeof (newInfo) === 'string') {
+        if (newInfo !== null && newInfo !== '' && typeof (newInfo) === 'string') {
             this.tasks[index].title = newInfo;
         }
-        if (newInfo != null && newInfo != '' && Number.isInteger(newInfo)) {
+        if (newInfo !== null && newInfo !== '' && Number.isInteger(newInfo)) {
             this.tasks[index].priority = newInfo;
         }
         return this.tasks[index];
