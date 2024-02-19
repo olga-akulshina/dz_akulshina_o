@@ -35,15 +35,27 @@ const toDoList = { //объект с методами из прошлого до
 }
 
 
-const newTask = { // объект, на который нужно переопределить методы
+const newTask = {
     tasks: [
         {
+            title: 'тест',
             id: 1,
-            name: 'тест',
-            description: 'описание',
-            order: 0
+            priority: 2
         }
     ]
 }
 
+const getTasks1 = toDoList.getTask.call(newTask, 'Помыть машину', 2, 3);
+const getTasks2 = toDoList.getTask.apply(newTask, ['Погулять с собакой', 3, 1]);
+console.log(newTask.tasks);
 
+const bindRemoveTasks = toDoList.removeTask.bind(newTask);
+bindRemoveTasks(2);
+console.log(newTask.tasks);
+
+const updateDatas = toDoList.updateData.bind(newTask);
+updateDatas(3, 'Погулять с котом');
+console.log(newTask.tasks);
+
+const sortFullTasks = toDoList.sortTasks.call(newTask);
+console.log(newTask.tasks);
